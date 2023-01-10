@@ -116,12 +116,12 @@ const calculateData = (array) => {
       const diff = currentValue - prevValue;
       if (diff > highestGain) {
         highestGain = diff;
-        dateAndAmountGain = `Greatest increase in profits \n Month \ \ Amount \n ${prevMonth} ${prevValue} \n ${currentMonth} ${currentValue}`;
+        dateAndAmountGain = "Greatest increase in profits \n Month \ \ Amount \n ${prevMonth} ${prevValue} \n ${currentMonth} ${currentValue}";
       }
       
       if (diff < worstGain) {
         worstGain = diff;
-        dateAndAmountLose = `Worst increase in profits \n Month \ \ Amount \n ${prevMonth} ${prevValue} \n ${currentMonth} ${currentValue}`;
+        dateAndAmountLose = "Worst increase in profits \n Month \ \ Amount \n ${prevMonth} ${prevValue} \n ${currentMonth} ${currentValue}";
       }
       
       sum += currentValue;
@@ -132,12 +132,20 @@ const calculateData = (array) => {
         totalLose += currentValue;
       }
     }
+
+    averagebyMonth = sum/length;
+
     console.log(dateAndAmountGain);
     console.log(dateAndAmountLose);
-    console.log(`Average by month ${sum/length}`);
-    console.log(`Total gain ${totalGain}. Total lose ${totalLose}`);
+    
+    console.log("Average by month =  " + averagebyMonth);
+    console.log("Total gain  = " + totalGain ); 
+    console.log("Total lose  = " + totalLose );
+
     
   }
+
+
   calculateData(finances);
 
 
