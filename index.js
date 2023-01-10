@@ -104,14 +104,14 @@ const calculateData = (array) => {
     var  totalGain = 0;
     var  totalLose = 0;
     
-    for (let i = 1; i < array.length; i++) {
-      const currentNumber = array[i];
-      const currentMonth = currentNumber[0];
-      const currentValue = currentNumber[1];
+    for (i = 1; i < array.length; i++) {
+      var currentNumber = array[i];
+      var currentMonth = currentNumber[0];
+      var currentValue = currentNumber[1];
       
-      const prevNumber = finances[i-1];
-      const prevMonth = prevNumber[0];
-      const prevValue = prevNumber[1];
+      var prevNumber = finances[i-1];
+      var prevMonth = prevNumber[0];
+      var prevValue = prevNumber[1];
       
       const diff = currentValue - prevValue;
       if (diff > highestGain) {
